@@ -1,0 +1,27 @@
+form {
+  margin-top:5vh;
+  border-color: red;
+}
+
+h1{
+  font-size: 3rem;
+}
+#welcome{
+  margin-top : 30vh;
+}
+.header {
+  font-size: 5rem;
+}
+.card-text{
+  text-overflow: ellipsis;
+}
+.card {
+  cursor: pointer;
+}
+
+.error-message {
+  display: none;
+  font-size: 1rem;
+  color:red;
+}
+
