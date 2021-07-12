@@ -1,15 +1,17 @@
 const express = require("express");
 const request = require("request");
 const bodyParser = require("body-parser");
+// const mongoose = require('mongoose');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 let allArticles = "";
 
 app.post("/", (req, res) => {
-  const api = "dd9b591f080dc155c2cc77f037ffb583";
+  const api = "2b3317379cf46e137d7045280dbc2b62";
   const keyword = req.body.article;
   const url = `https://gnews.io/api/v4/search?q=${keyword}&max=9&token=${api}`;
 
@@ -26,8 +28,12 @@ app.post("/", (req, res) => {
   console.log(`Search keywords: ${keyword}`);
 });
 
-const cardId = "/:var(0|1|2|3|4|5|6|7|8)?";
-app.get(cardId, (req, res) => {
+
+
+//digits from 0 to 8 is each card index number//
+const cardId = ":var(0|1|2|3|4|5|6|7|8)?";
+app.get(`/${cardId}`, (req, res) => {
+  //req.url is url that match each article index number//
   switch (req.url) {
     case "/0":
       console.log("First article details:");
