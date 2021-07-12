@@ -1,11 +1,9 @@
 const express = require("express");
 const request = require("request");
 const bodyParser = require("body-parser");
-// const mongoose = require('mongoose');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
-app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 let allArticles = "";
@@ -64,11 +62,11 @@ app.get(`/${cardId}`, (req, res) => {
       console.log(allArticles[6]);
       break;
     case "/7":
-      console.log("Eight article details:");
+      console.log("Eighth article details:");
       console.log(allArticles[7]);
       break;
     case "/8":
-      console.log("Nineth article details:");
+      console.log("Ninth article details:");
       console.log(allArticles[8]);
       break;
   }

@@ -1,22 +1,10 @@
-import "./App.css";
+import "./styles/App.scss"
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Articles from  './Articles';
+import Articles from "./components/Articles";
 
 function App() {
-  return (
-    <>
-    {/* <Router>
-     
-          <Switch>
-              <Route path='/articles' component={Articles} />
-          </Switch>
-      </Router> */}
-      <Articles/>
-    </>
-
-  )
+  return <Articles />;
 }
 
 export default App;

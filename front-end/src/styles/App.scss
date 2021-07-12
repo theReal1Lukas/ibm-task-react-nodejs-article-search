@@ -1,0 +1,54 @@
+$text-color: white;
+$card-body-color: rgba(245, 222, 179, 0.8);
+$error-message-color: red;
+$box-shadow-color: rgba(0, 0, 0, 0.2);
+$box-shadow-hover-color: rgba(0, 0, 0, 0.4);
+$bg-img: url("../images/background-img.png");
+
+.main {
+  background: $bg-img;
+  background-size: cover;
+  height: 100vh;
+
+  #welcome {
+    margin-top: 30vh;
+  }
+
+  form {
+    margin-top: 5vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: $text-color;
+  }
+
+  .header {
+    font-size: 5rem;
+  }
+
+  .card {
+    cursor: pointer;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 $box-shadow-color;
+    transition: 0.3s;
+    :hover {
+      box-shadow: 0 8px 16px 0 $box-shadow-hover-color;
+    }
+    .card-body {
+      background-color: $card-body-color;
+    }
+    .card-text,
+    .card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  }
+
+  .error-message,.error-message-length {
+    display: none;
+    font-size: 1rem;
+    color: $error-message-color;
+  }
+}
